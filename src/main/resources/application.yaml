@@ -1,0 +1,17 @@
+server:
+  port: 9002
+spring:
+  application:
+    name: CONFIG-SERVER
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/configurations
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
