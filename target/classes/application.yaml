@@ -9,7 +9,9 @@ spring:
     config:
       server:
         native:
-          search-locations: classpath:/configurations
+          search-locations:
+            - classpath:/configurations/platform
+            - classpath:/configurations/services
 management:
   endpoints:
     web:
