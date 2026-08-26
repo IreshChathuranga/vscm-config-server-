@@ -1,0 +1,19 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: VEHICLE-SERVICE
+  datasource:
+    url: ${VEHICLE_DB_URL:jdbc:mysql://localhost:13500/autocare_vehicle?createDatabaseIfNotExist=true&serverTimezone=UTC}
+    username: ${VEHICLE_DB_USER:root}
+    password: ${VEHICLE_DB_PASSWORD:mysql}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+autocare:
+  storage-path: ${AUTOCARE_STORAGE_PATH:${user.home}/.autocare/vehicles}

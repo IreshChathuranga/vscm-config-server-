@@ -1,0 +1,8 @@
+server:
+  port: 8002
+spring:
+  application:
+    name: SERVICE-CATALOG-SERVICE
+  data:
+    mongodb:
+      uri: ${CATALOG_MONGO_URL:mongodb://root:mongodb@localhost:14500/autocare_catalog?authSource=admin}
