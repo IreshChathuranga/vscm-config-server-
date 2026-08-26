@@ -3,13 +3,13 @@ server:
 spring:
   application:
     name: SERVICE-REGISTRY
-eureka:
-  instance:
-    hostname: localhost
-  client:
-    register-with-eureka: false
-    fetch-registry: false
-    service-url:
-      defaultZone: http://localhost:9001/eureka/
+#eureka:
+#  instance:
+#    hostname: localhost
+#  client:
+#    register-with-eureka: false
+#    fetch-registry: false
+#    service-url:
+#      defaultZone: http://localhost:9001/eureka/
   server:
     enable-self-preservation: false
