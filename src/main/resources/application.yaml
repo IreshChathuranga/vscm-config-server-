@@ -4,18 +4,15 @@ spring:
   application:
     name: CONFIG-SERVER
   profiles:
-    active: native
+    active: git
   cloud:
     config:
       server:
         git:
-            uri: https://github.com/IreshChathuranga/vscm-configuration.git
-            search-paths: platform,services
-        native:
-          search-locations:
-            - classpath:/configurations
-            - classpath:/configurations/platform
-            - classpath:/configurations/services
+          uri: https://github.com/IreshChathuranga/vscm-configuration.git
+          default-label: main
+          search-paths: platform,services
+          clone-on-start: true
 management:
   endpoints:
     web:
