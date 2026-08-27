@@ -3,13 +3,15 @@ server:
 spring:
   application:
     name: SERVICE-REGISTRY
-#eureka:
-#  instance:
-#    hostname: localhost
-#  client:
-#    register-with-eureka: false
-#    fetch-registry: false
-#    service-url:
-#      defaultZone: http://localhost:9001/eureka/
+eureka:
+  instance:
+    hostname: "${EUREKA_INSTANCE_HOSTNAME:${HOSTNAME:localhost}}"
+    instance-id: "${EUREKA_INSTANCE_HOSTNAME:${HOSTNAME:${spring.application.name}}}:${spring.application.name}:${server.port}"
+    prefer-ip-address: false
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: "${EUREKA_DEFAULT_ZONE:http://vm-node-a.platform:9001/eureka/,http://vm-node-b.platform:9001/eureka/,http://vm-node-c.platform:9001/eureka/}"
   server:
     enable-self-preservation: false

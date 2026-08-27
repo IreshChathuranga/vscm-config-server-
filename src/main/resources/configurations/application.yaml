@@ -4,11 +4,12 @@ spring:
       enabled: true
 eureka:
   instance:
-    hostname: localhost
+    hostname: "${EUREKA_INSTANCE_HOSTNAME:${HOSTNAME:localhost}}"
+    instance-id: "${EUREKA_INSTANCE_HOSTNAME:${HOSTNAME:${spring.application.name}}}:${spring.application.name}:${server.port}"
     prefer-ip-address: false
   client:
     service-url:
-      defaultZone: http://vm-node-a.platform:9001/eureka/ ,http://vm-node-b.platform:9001/eureka/ ,http://vm-node-c.platform:9001/eureka/
+      defaultZone: "${EUREKA_DEFAULT_ZONE:http://vm-node-a.platform:9001/eureka/,http://vm-node-b.platform:9001/eureka/,http://vm-node-c.platform:9001/eureka/}"
     register-with-eureka: true
     fetch-registry: true
 management:
