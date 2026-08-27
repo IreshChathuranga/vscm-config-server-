@@ -4,7 +4,7 @@ spring:
   application:
     name: CUSTOMER-SERVICE
   datasource:
-    url: ${CUSTOMER_DB_URL:jdbc:postgresql://localhost:12500/autocare_customer}
+    url: ${CUSTOMER_DB_URL:jdbc:postgresql://localhost:5432/db-vscm}
     username: ${CUSTOMER_DB_USER:postgres}
     password: ${CUSTOMER_DB_PASSWORD:psql}
   jpa:

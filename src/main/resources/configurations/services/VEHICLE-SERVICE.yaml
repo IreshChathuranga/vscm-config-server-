@@ -4,7 +4,7 @@ spring:
   application:
     name: VEHICLE-SERVICE
   datasource:
-    url: ${VEHICLE_DB_URL:jdbc:mysql://localhost:13500/autocare_vehicle?createDatabaseIfNotExist=true&serverTimezone=UTC}
+    url: ${VEHICLE_DB_URL:jdbc:mysql://localhost:3306/db-vscm?createDatabaseIfNotExist=true&serverTimezone=UTC}
     username: ${VEHICLE_DB_USER:root}
     password: ${VEHICLE_DB_PASSWORD:mysql}
   jpa:

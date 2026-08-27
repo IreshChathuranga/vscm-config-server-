@@ -4,7 +4,7 @@ spring:
   application:
     name: BILLING-SERVICE
   datasource:
-    url: ${BILLING_DB_URL:jdbc:mysql://localhost:16500/autocare_billing?createDatabaseIfNotExist=true&serverTimezone=UTC}
+    url: ${BILLING_DB_URL:jdbc:mysql://localhost:3306/db-vscm?createDatabaseIfNotExist=true&serverTimezone=UTC}
     username: ${BILLING_DB_USER:root}
     password: ${BILLING_DB_PASSWORD:mysql}
   jpa:

@@ -4,7 +4,7 @@ spring:
   application:
     name: WORK-ORDER-SERVICE
   datasource:
-    url: ${WORKORDER_DB_URL:jdbc:postgresql://localhost:15500/autocare_workorder}
+    url: ${WORKORDER_DB_URL:jdbc:postgresql://localhost:5432/db-vscm}
     username: ${WORKORDER_DB_USER:postgres}
     password: ${WORKORDER_DB_PASSWORD:psql}
   jpa:
